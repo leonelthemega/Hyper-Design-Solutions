@@ -1,0 +1,561 @@
+/*Global Settings*/
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.line {
+  font-size: 1rem;
+  color: #d92027;
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: "Chelsea Market", cursive;
+}
+
+/*Header & Showcase*/
+header {
+  min-height: 100vh;
+}
+
+header .bg-im {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(194, 17, 17, 0.8) 100%), url(img/silver-imac-displaying-collage-photos-1779487.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+header .header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .logo {
+  padding-top: 10px;
+}
+
+header .logo a {
+  color: whitesmoke;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header ul li {
+  padding: 10px 10px;
+  list-style: none;
+}
+
+header ul li .nav-link,
+header ul li .current {
+  color: #fafafa;
+  position: relative;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+header ul li .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  color: whitesmoke;
+  bottom: -.5rem;
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 650ms;
+  transition: -webkit-transform 650ms;
+  transition: transform 650ms;
+  transition: transform 650ms, -webkit-transform 650ms;
+}
+
+header ul li .nav-link:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header .mode {
+  padding-top: 10px;
+}
+
+header .mode a {
+  color: whitesmoke;
+}
+
+header .mode i {
+  color: whitesmoke;
+  padding: 0px 5px;
+  font-size: 1.2rem;
+  padding-top: 2px;
+}
+
+header .mode .fa-facebook-f:hover {
+  color: #1877f2;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+header .mode .fa-twitter:hover {
+  color: #1da1f2;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+header .mode .fa-instagram:hover {
+  color: #f46f30;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+header .mode .fa-linkedin:hover {
+  color: #007bb5;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+header .showcase {
+  color: whitesmoke;
+  padding: 400px 80px;
+}
+
+header .showcase a {
+  color: whitesmoke;
+  margin-top: 20px;
+}
+
+header .showcase h4 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  padding-bottom: 25px;
+}
+
+header .showcase h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  padding: 10px 0px;
+}
+
+header .showcase .btn-dark {
+  color: #111;
+}
+
+header .down-skew {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 35vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+/*About*/
+#about {
+  min-height: 100vh;
+  text-align: center;
+}
+
+#about h2 {
+  font-family: "Chelsea Market", cursive;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  padding-top: 30px;
+}
+
+#about p {
+  text-align: justify;
+  margin: 10px;
+  line-height: 1.5;
+}
+
+#about .services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 100px;
+}
+
+#about .services h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  padding-bottom: 0px;
+  padding-top: 7px;
+}
+
+#about .services p {
+  text-align: center;
+  padding-top: 0px;
+}
+
+#about .services i {
+  color: #d92027;
+  padding-top: 30px;
+}
+
+/*Portfolio*/
+#portfolio {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #141313;
+}
+
+#portfolio .back-im {
+  position: relative;
+}
+
+#portfolio .up-skew {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 35vh 100vw 0 0;
+  border-style: solid;
+  border-color: white transparent transparent  transparent;
+}
+
+#portfolio .down-skew {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 35vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #141313 transparent;
+}
+
+#portfolio #head {
+  text-align: center;
+}
+
+#portfolio #head h2 {
+  font-family: "Chelsea Market", cursive;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  padding-top: 20px;
+  color: whitesmoke;
+}
+
+#portfolio #head p {
+  color: whitesmoke;
+  padding-bottom: 100px;
+}
+
+#portfolio .port {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 100px 50px;
+}
+
+#portfolio .port img {
+  width: 350px;
+}
+
+#portfolio .port img:hover {
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#portfolio .port-completo {
+  margin: 120px 0px;
+  text-align: center;
+}
+
+#portfolio .port-completo a {
+  color: whitesmoke;
+}
+
+#portfolio .happy h2, #portfolio .happy p {
+  color: whitesmoke;
+  text-align: center;
+}
+
+#portfolio .happy h2 {
+  font-family: "Chelsea Market", cursive;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+#portfolio .happy p {
+  padding-bottom: 100px;
+  font-style: italic;
+}
+
+#portfolio .happy p span {
+  color: #d92027;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+#portfolio .happy .clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#portfolio .happy .clients blockquote {
+  color: whitesmoke;
+  background-color: black;
+  padding: 30px 20px;
+  border: 1px solid #d92027;
+  font-size: 0.9rem;
+  font-style: italic;
+  border-radius: 4%;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.8rem black;
+          box-shadow: 0.1rem 0.1rem 0.8rem black;
+  margin-bottom: 40px;
+}
+
+#portfolio .happy .clients blockquote:hover {
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#portfolio .happy .clients .client1 {
+  padding: 0px 20px;
+}
+
+#portfolio .happy .clients .client1 img {
+  width: 20%;
+  border: 2px solid #d92027;
+  border-radius: 50%;
+  display: block;
+  margin: 0px 230px;
+}
+
+#portfolio .happy .clients .client1 img:hover {
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#portfolio .happy .clients .client1 .avatar {
+  color: whitesmoke;
+}
+
+#portfolio .happy .clients .client1 .avatar h3 {
+  font-weight: bolder;
+  text-align: center;
+}
+
+#portfolio .happy .clients .client1 .avatar p {
+  font-weight: lighter;
+  padding-bottom: 30px;
+}
+
+/*Team*/
+#team {
+  min-height: 100vh;
+}
+
+#team .team-players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+#team .team-players img {
+  width: 107%;
+}
+
+#team .team-players .up-skew {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 35vh 100vw 0 0;
+  border-style: solid;
+  border-color: #141313 transparent transparent transparent;
+}
+
+#team .team-players .down-skew {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 35vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent  white transparent;
+}
+
+#team #head-team {
+  text-align: center;
+  color: black;
+}
+
+#team #head-team h2 {
+  font-family: "Chelsea Market", cursive;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  padding-top: 35px;
+}
+
+#team #head-team p {
+  padding: 5px 40px;
+  margin-bottom: 30px;
+}
+
+#team .equipo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px 40px;
+  width: 90%;
+  margin: 0px auto;
+}
+
+#team .equipo h4, #team .equipo p {
+  text-align: center;
+}
+
+#team .equipo h4 {
+  font-weight: bolder;
+  letter-spacing: 1px;
+  font-family: "Chelsea Market", cursive;
+}
+
+#team .equipo p {
+  font-weight: normal;
+  color: #cc1f1f;
+}
+
+#team .equipo img {
+  border-radius: 5%;
+  border: 1px solid black;
+}
+
+#team .equipo img:hover {
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+/*Contact*/
+#contact {
+  position: relative;
+  color: whitesmoke;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#contact .bg-foot {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(194, 17, 17, 0.8) 100%), url(img/person-using-macbook-pro-on-person-s-lap-1181298.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+#contact h2 {
+  padding-top: 600px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.5rem;
+  padding-bottom: 10px;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+}
+
+#contact .up-skew {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 35vh 100vw 0 0;
+  border-style: solid;
+  border-color: white transparent transparent  transparent;
+}
+
+#contact i {
+  padding-right: 10px;
+  color: whitesmoke;
+}
+
+#contact p {
+  padding-bottom: 20px;
+}
+
+#contact .mode i {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+
+#contact .fa-facebook-f:hover {
+  color: #1877f2;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+#contact .fa-twitter:hover {
+  color: #1da1f2;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+#contact .fa-instagram:hover {
+  color: #f46f30;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+#contact .fa-linkedin:hover {
+  color: #007bb5;
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */
